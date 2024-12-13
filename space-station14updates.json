@@ -42,7 +42,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd space-station14/server && download_url=$(wget -qO- https://wizards.cdn.spacestation14.com/fork/wizards/manifest | jq -r \\\".builds | to_entries | last | .value.server.\\\\\\\"linux-x64\\\\\\\".url\\\") && wget -q $download_url && unzip -qo SS14.Server_linux-x64.zip && rm -rf SS14.Server_linux-x64.zip && chmod +x Robust.Server\"",
+        "UpdateSourceArgs": "-c \"cd space-station14/server && download_url=$(wget -qO- https://wizards.cdn.spacestation14.com/fork/wizards/manifest | jq -r \\\".builds | to_entries | sort_by(.value.time) | last | .value.server.\\\\\\\"linux-x64\\\\\\\".url\\\") && wget -q $download_url && unzip -qo SS14.Server_linux-x64.zip && rm -rf SS14.Server_linux-x64.zip && chmod +x Robust.Server\"",
         "UpdateSourceArch": "x86_64",
         "UpdateSourceConditionSetting": "ServerBuild",
         "UpdateSourceConditionValue": "latest"
@@ -52,7 +52,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd space-station14/server && download_url=$(wget -qO- https://wizards.cdn.spacestation14.com/fork/wizards/manifest | jq -r \\\".builds | to_entries | last | .value.server.\\\\\\\"linux-arm64\\\\\\\".url\\\") && wget -q $download_url && unzip -qo SS14.Server_linux-arm64.zip && rm -rf SS14.Server_linux-arm64.zip && chmod +x Robust.Server\"",
+        "UpdateSourceArgs": "-c \"cd space-station14/server && download_url=$(wget -qO- https://wizards.cdn.spacestation14.com/fork/wizards/manifest | jq -r \\\".builds | to_entries | sort_by(.value.time) | last | .value.server.\\\\\\\"linux-arm64\\\\\\\".url\\\") && wget -q $download_url && unzip -qo SS14.Server_linux-arm64.zip && rm -rf SS14.Server_linux-arm64.zip && chmod +x Robust.Server\"",
         "UpdateSourceArch": "aarch64",
         "UpdateSourceConditionSetting": "ServerBuild",
         "UpdateSourceConditionValue": "latest"
@@ -62,7 +62,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C start /wait powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command \"cd space-station14/server ; $Manifest = Invoke-WebRequest -UseBasicParsing -Uri 'https://wizards.cdn.spacestation14.com/fork/wizards/manifest' | ConvertFrom-Json ; $LastBuildKey = $Manifest.builds.PSObject.Properties.Name | Select-Object -Last 1 ; $DownloadUrl = $Manifest.builds.$LastBuildKey.server.'win-x64'.url ; Invoke-WebRequest -UseBasicParsing -Uri $DownloadUrl -OutFile 'SS14.Server_win-x64.zip' ; Expand-Archive -Path 'SS14.Server_win-x64.zip' -DestinationPath '.' -Force ; Remove-Item 'SS14.Server_win-x64.zip'\"",
+        "UpdateSourceArgs": "/C start /wait powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command \"cd space-station14/server ; $Manifest = Invoke-WebRequest -UseBasicParsing -Uri 'https://wizards.cdn.spacestation14.com/fork/wizards/manifest' | ConvertFrom-Json ; $SortedBuilds = $Manifest.builds.PSObject.Properties | Sort-Object { $_.Value.time } ; $LastBuild = $SortedBuilds[-1] ; $DownloadUrl = $LastBuild.Value.server.'win-x64'.url ; Invoke-WebRequest -UseBasicParsing -Uri $DownloadUrl -OutFile 'SS14.Server_win-x64.zip' ; Expand-Archive -Path 'SS14.Server_win-x64.zip' -DestinationPath '.' -Force ; Remove-Item 'SS14.Server_win-x64.zip'\"",
         "UpdateSourceConditionSetting": "ServerBuild",
         "UpdateSourceConditionValue": "latest"
     },
