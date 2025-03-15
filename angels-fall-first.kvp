@@ -10,12 +10,12 @@ Meta.ContainerPolicy=Supported
 Meta.ContainerPolicyReason=
 Meta.Prerequsites=[]
 Meta.EndpointURIFormat=steam://connect/{ip}:{GenericModule.App.Ports.$SteamQueryPort}
-Meta.AppConfigId=3d9c5fb2-cbdf-4f65-9e0a-7c1ddb4ffb24
+Meta.AppConfigId=cc596420-1cbe-4663-a7a1-8bdc65f1adf0
 App.AdminMethod=STDIO
 App.HasReadableConsole=true
 App.HasWritableConsole=true
 App.DisplayName=Angels Fall First
-App.CommandLineArgs={{Map}}?GamePassword={{GamePassword}}?numplay={{MaxPlayers}}?BalanceBots={{BalanceBots}}?briefingtime=60 -log={{configsubdir}}/server.log -seekfreeloadingserver -Port={{$GamePort}} {{$PlatformArgs}} {{$FormattedArgs}}
+App.CommandLineArgs={{Map}}?GamePassword={{GamePassword}}?numplay={{MaxPlayers}}?BalanceBots={{BalanceBots}}?briefingtime=60 -log={{ConfigDir}}/server.log -configsubdir={{ConfigDir}} -seekfreeloadingserver -Port={{$GamePort}} {{$PlatformArgs}} {{$FormattedArgs}}
 App.WindowsCommandLineArgs=
 App.CommandLineParameterFormat=-{0} "{1}"
 App.CommandLineParameterDelimiter= 
@@ -81,4 +81,4 @@ App.ExecutableLinux=407480/
 App.LinuxCommandLineArgs=
 App.Ports=@IncludeJson[angels-fall-firstports.json]
 App.UpdateSources=@IncludeJson[angels-fall-firstupdates.json]
-App.EnvironmentVariables={"LD_LIBRARY_PATH": "{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%", "WINEPREFIX": "{{$FullRootDir}}.wine", "WINEARCH": "win64", "WINEDEBUG": "-all"","SteamAppId":"367270"}
+App.EnvironmentVariables={"LD_LIBRARY_PATH": "{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%", "WINEPREFIX": "{{$FullRootDir}}.wine", "WINEARCH": "win64", "WINEDEBUG": "-all","SteamAppId":"367270"}

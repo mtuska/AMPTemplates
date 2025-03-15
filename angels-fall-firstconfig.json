@@ -59,7 +59,7 @@
         "InputType": "text",
         "IsFlagArgument": false,
         "ParamFieldName": "configsubdir",
-        "IncludeInCommandLine": true,
+        "IncludeInCommandLine": false,
         "DefaultValue": "AMPServer",
         "Placeholder": "AMPServer",
         "Suffix": "",
