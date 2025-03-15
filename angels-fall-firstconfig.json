@@ -94,8 +94,8 @@
         "IsFlagArgument": false,
         "ParamFieldName": "MaxPlayers",
         "IncludeInCommandLine": false,
-        "DefaultValue": "32",
-        "Placeholder": "32",
+        "DefaultValue": "64",
+        "Placeholder": "64",
         "Suffix": "",
         "Hidden": false,
         "SkipIfEmpty": false,
@@ -122,10 +122,10 @@
         }
     },
     {
-        "DisplayName": "Minimum Number of Players",
+        "DisplayName": "Min Players",
         "Category": "Server Settings",
         "Description": "If this limit is not met, bots will be added",
-        "Keywords": "minimum,number,of,players",
+        "Keywords": "min,players",
         "FieldName": "MinPlayers",
         "InputType": "number",
         "IsFlagArgument": false,

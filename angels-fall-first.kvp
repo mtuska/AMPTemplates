@@ -11,11 +11,11 @@ Meta.ContainerPolicyReason=
 Meta.Prerequsites=[]
 Meta.EndpointURIFormat=steam://connect/{ip}:{GenericModule.App.Ports.$SteamQueryPort}
 Meta.AppConfigId=cc596420-1cbe-4663-a7a1-8bdc65f1adf0
-App.AdminMethod=STDIO
+App.AdminMethod=SourceRCON
 App.HasReadableConsole=true
 App.HasWritableConsole=true
 App.DisplayName=Angels Fall First
-App.CommandLineArgs={{Map}}?GamePassword={{GamePassword}}?NumPlay={{MinPlayers}}?MaxPlayers={{MaxPlayers}}?BalanceBots={{BalanceBots}}?briefingtime=60 -log=server.log -seekfreeloadingserver -Port={{$GamePort1}} {{$PlatformArgs}} {{$FormattedArgs}}
+App.CommandLineArgs={{Map}}?GamePassword={{GamePassword}}?NumPlay={{MinPlayers}}?MaxPlayers={{MaxPlayers}}?BalanceBots={{BalanceBots}}?briefingtime=60 -rconport={{$SteamQueryPort}} -rconpassword={{$RemoteAdminPassword}} -log=server.log -seekfreeloadingserver -Port={{$GamePort1}} {{$PlatformArgs}} {{$FormattedArgs}}
 App.WindowsCommandLineArgs=
 App.CommandLineParameterFormat=-{0} "{1}"
 App.CommandLineParameterDelimiter= 

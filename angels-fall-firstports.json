@@ -12,5 +12,12 @@
         "Name": "Steam Query Port",
         "Description": "Port used for main game traffic",
         "Ref": "SteamQueryPort"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": "7778",
+        "Name": "Remote Admin Port",
+        "Description": "Port used for main game traffic",
+        "Ref": "RemoteAdminPort"
     }
 ]
