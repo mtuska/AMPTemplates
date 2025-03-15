@@ -1,0 +1,53 @@
+[
+    {
+        "DisplayName": "Message of the Day",
+        "Category": "Server Settings",
+        "Description": "Message of the Day",
+        "Keywords": "message,of,the,day",
+        "FieldName": "MessageOfTheDay",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MessageOfTheDay",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Welcome to an AFF Server!",
+        "Placeholder": "Welcome to an AFF Server!",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "ServerName",
+        "Category": "Server Settings",
+        "Description": "The name displayed in server browser.",
+        "Keywords": "servername",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "ServerName",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "AFF Server",
+        "Placeholder": "AFF Server",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Description",
+        "Category": "Server Settings",
+        "Description": "Description of the server(No idea what it is)",
+        "Keywords": "server,description",
+        "FieldName": "ServerDescription",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "ServerDescription",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    }
+]
