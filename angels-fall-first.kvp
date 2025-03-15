@@ -15,7 +15,7 @@ App.AdminMethod=STDIO
 App.HasReadableConsole=true
 App.HasWritableConsole=true
 App.DisplayName=Angels Fall First
-App.CommandLineArgs={{Map}}?GamePassword={{GamePassword}}?numplay={{MaxPlayers}}?BalanceBots={{BalanceBots}}?briefingtime=60 -log={{ConfigDir}}/server.log -configsubdir={{ConfigDir}} -seekfreeloadingserver -Port={{$GamePort}} {{$PlatformArgs}} {{$FormattedArgs}}
+App.CommandLineArgs={{Map}}?GamePassword={{GamePassword}}?NumPlay={{MinPlayers}}?MaxPlayers={{MaxPlayers}}?BalanceBots={{BalanceBots}}?briefingtime=60 -log=server.log -seekfreeloadingserver -Port={{$GamePort1}} {{$PlatformArgs}} {{$FormattedArgs}}
 App.WindowsCommandLineArgs=
 App.CommandLineParameterFormat=-{0} "{1}"
 App.CommandLineParameterDelimiter= 

@@ -51,23 +51,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Sub Directory",
-        "Category": "Server Settings",
-        "Description": "Config sub directory",
-        "Keywords": "sub,directory",
-        "FieldName": "configsubdir",
-        "InputType": "text",
-        "IsFlagArgument": false,
-        "ParamFieldName": "configsubdir",
-        "IncludeInCommandLine": false,
-        "DefaultValue": "AMPServer",
-        "Placeholder": "AMPServer",
-        "Suffix": "",
-        "Hidden": false,
-        "SkipIfEmpty": true,
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Map",
         "Category": "Server Settings",
         "Description": "Server starting map",
@@ -128,8 +111,8 @@
         "IsFlagArgument": false,
         "ParamFieldName": "BalanceBots",
         "IncludeInCommandLine": false,
-        "DefaultValue": "",
-        "Placeholder": "",
+        "DefaultValue": "true",
+        "Placeholder": "true",
         "Suffix": "",
         "Hidden": false,
         "SkipIfEmpty": false,
@@ -137,5 +120,22 @@
             "true": "True",
             "false": "False"
         }
+    },
+    {
+        "DisplayName": "Minimum Number of Players",
+        "Category": "Server Settings",
+        "Description": "If this limit is not met, bots will be added",
+        "Keywords": "minimum,number,of,players",
+        "FieldName": "MinPlayers",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MinPlayers",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "32",
+        "Placeholder": "32",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
     }
 ]
