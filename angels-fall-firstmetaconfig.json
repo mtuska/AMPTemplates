@@ -1,7 +1,30 @@
 [
     {
-        "ConfigFile": "AFFGame\\Config\\DefaultGame.ini",
+        "ConfigFile": "./AFFGame/Config/DefaultGame.ini",
         "ConfigType": "ini",
-        "AutoMap": true
+        "AutoMap": true,
+        "ConfigFormat": "{0}=\"{1}\"",
+        "ConfigFormatRegex": "^(?<key>.+?)=\"?(?<value>.+?)?\"?$"
+    },
+    {
+        "ConfigFile": "./AFFGame/Config/DefaultEngine.ini",
+        "ConfigType": "ini",
+        "AutoMap": true,
+        "ConfigFormat": "{0}=\"{1}\"",
+        "ConfigFormatRegex": "^(?<key>.+?)=\"?(?<value>.+?)?\"?$"
+    },
+    {
+        "ConfigFile": "./AFFGame/Config/PCServer-AFFGame.ini",
+        "ConfigType": "ini",
+        "AutoMap": true,
+        "ConfigFormat": "{0}=\"{1}\"",
+        "ConfigFormatRegex": "^(?<key>.+?)=\"?(?<value>.+?)?\"?$"
+    },
+    {
+        "ConfigFile": "./AFFGame/Config/PCServer-AFFEngine.ini",
+        "ConfigType": "ini",
+        "AutoMap": true,
+        "ConfigFormat": "{0}=\"{1}\"",
+        "ConfigFormatRegex": "^(?<key>.+?)=\"?(?<value>.+?)?\"?$"
     }
 ]

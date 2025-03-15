@@ -15,7 +15,7 @@ App.AdminMethod=SourceRCON
 App.HasReadableConsole=true
 App.HasWritableConsole=true
 App.DisplayName=Angels Fall First
-App.CommandLineArgs={{Map}}?GamePassword={{GamePassword}}?NumPlay={{MinPlayers}}?MaxPlayers={{MaxPlayers}}?BalanceBots={{BalanceBots}}?briefingtime=60 -rconport={{$SteamQueryPort}} -rconpassword={{$RemoteAdminPassword}} -log=server.log -seekfreeloadingserver -Port={{$GamePort1}} {{$PlatformArgs}} {{$FormattedArgs}}
+App.CommandLineArgs={{Map}}?GamePassword={{GamePassword}}?NumPlay={{MinPlayers}}?MaxPlayers={{MaxPlayers}}?BalanceBots={{BalanceBots}}?briefingtime=60 -Port={{$GamePort1}} -QueryPort={{$SteamQueryPort}} -RconEnabled=True -RconPort={{$RemoteAdminPort}} -RconPassword={{$RemoteAdminPassword}} -log=server.log -seekfreeloadingserver {{$PlatformArgs}} {{$FormattedArgs}}
 App.WindowsCommandLineArgs=
 App.CommandLineParameterFormat=-{0} "{1}"
 App.CommandLineParameterDelimiter= 
