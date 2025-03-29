@@ -1,0 +1,36 @@
+[
+    {
+        "DisplayName": "secret",
+        "Category": "Server Settings",
+        "Description": "Secret to be shared with the Arma 3 Addon",
+        "Keywords": "secret",
+        "FieldName": "secret",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "ParamFieldName": "secret",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Listen Address",
+        "Category": "Server Settings",
+        "Description": "",
+        "Keywords": "listen,address",
+        "FieldName": "listen",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "listen",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0.0.0.0:5000",
+        "Placeholder": "0.0.0.0:5000",
+        "Suffix": "",
+        "Hidden": false,
+        "SkipIfEmpty": false,
+        "EnumValues": {}
+    }
+]
