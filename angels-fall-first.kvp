@@ -11,12 +11,12 @@ Meta.ContainerPolicyReason=The server requires Wine to run on Linux. Using a con
 Meta.Prerequsites=[]
 Meta.EndpointURIFormat=steam://connect/{ip}:{GenericModule.App.Ports.$SteamQueryPort}
 Meta.AppConfigId=cc596420-1cbe-4663-a7a1-8bdc65f1adf0
-App.AdminMethod=SourceRCON
+App.AdminMethod=STDIO
 App.HasReadableConsole=True
 App.HasWriteableConsole=True
 App.UseLinuxIOREDIR=False
 App.DisplayName=Angels Fall First
-App.CommandLineArgs={{$PlatformArgs}} {{Map}}?GamePassword={{GamePassword}}?NumPlay={{MinPlayers}}?MaxPlayers={{MaxPlayers}}?BalanceBots={{BalanceBots}}?RandomCommander={{RandomCommander}} -Port={{$GamePort1}} -QueryPort={{$SteamQueryPort}} -RconEnabled=True -RconPort={{$RemoteAdminPort}} -RconPassword={{$RemoteAdminPassword}} -log=server.log -seekfreeloadingserver {{$FormattedArgs}}
+App.CommandLineArgs={{$PlatformArgs}} {{Map}}?GamePassword={{GamePassword}}?NumPlay={{MinPlayers}}?MaxPlayers={{MaxPlayers}}?BalanceBots={{BalanceBots}}?RandomCommander={{RandomCommander}} -Port={{$GamePort1}} -QueryPort={{$SteamQueryPort}} -log=server.log -seekfreeloadingserver {{$FormattedArgs}}
 App.WindowsCommandLineArgs=
 App.CommandLineParameterFormat=-{0} "{1}"
 App.CommandLineParameterDelimiter= 
@@ -29,7 +29,7 @@ App.ExitFile=app_exit.lck
 App.SupportsLiveSettingsChanges=False
 App.LiveSettingChangeCommandFormat=set {0} "{1}"
 App.ApplicationIPBinding=0.0.0.0
-App.AdminPortRef=RemoteAdminPort
+App.AdminPortRef=0
 App.UniversalSleepApplicationUDPPortRef=GamePort1
 App.PrimaryApplicationPortRef=GamePort1
 App.UniversalSleepSteamQueryPortRef=SteamQueryPort
