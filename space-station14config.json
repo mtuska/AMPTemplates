@@ -348,7 +348,7 @@
         "DisplayName": "Dotnet Release Stream",
         "Category": "Updates",
         "Subcategory": "Server Updates:build:-1",
-        "Description": "Sets the .NET release stream from which to install the latest .NET Runtime version, unless a specific version is specified under Dotnet Version. Update the server after changing this setting",
+        "Description": "Sets the .NET release stream from which to install the latest .NET Runtime version, unless a specific version is specified under Dotnet Version. If Custom is selected, Custom Dotnet Release Stream must also be specified. Update the server after changing this setting",
         "Keywords": "dotnet,release,stream",
         "FieldName": "DotnetRelease",
         "InputType": "enum",
@@ -359,8 +359,23 @@
             "10.0": "10.0 (default)",
             "9.0": "9.0",
             "8.0": "8.0",
-            "7.0": "7.0"
+            "7.0": "7.0",
+            "{{CustomDotnetRelease}}": "Custom"
         }
+    },
+    {
+        "DisplayName": "Custom Dotnet Release Stream",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets a custom .NET release stream when Custom is selected under Dotnet Release Stream. Use the major.minor format, for example 11.0",
+        "Keywords": "dotnet,custom,release,stream",
+        "FieldName": "CustomDotnetRelease",
+        "InputType": "text",
+        "ParamFieldName": "CustomDotnetRelease",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "11.0",
+        "EnumValues": {}
     },
     {
         "DisplayName": "Dotnet Version",
